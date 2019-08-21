@@ -8,7 +8,7 @@ const Item = (function(){
     
   function validateName(name) {
     if (!name) {
-      throw new TypeError('Name does not exist');
+      throw new TypeError('Thats not a name!!!');
     } 
   }
   

@@ -38,7 +38,6 @@ const store = (function () {
       catch {
         console.log(`Cannot update name: {error.message}`);
       }
-
   }
 
   function findAndDelete(id){
@@ -47,7 +46,13 @@ const store = (function () {
     console.log(items);
   }
     
-    
+  function toggleCheckedFilter() {
+    this.hideCheckedItems = !this.hideCheckedItems;
+  }
+  
+  function setSearchTerm(term) {
+    this.searchTerm = term;
+  }
 
 
   return {
@@ -59,6 +64,8 @@ const store = (function () {
     findAndToggleChecked : findAndToggleChecked,
     findAndUpdateName : findAndUpdateName,
     findAndDelete : findAndDelete,
+    toggleCheckedFilter: toggleCheckedFilter,
+    setSearchTerm: setSearchTerm
 
 
   };
